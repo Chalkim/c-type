@@ -1,0 +1,6 @@
+{
+  "name": "C-Type Visualizer",
+  "description": "An interactive tool for learning C data types, memory layouts, and IEEE 754 floating-point standards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

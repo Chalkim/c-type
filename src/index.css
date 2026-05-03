@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --accent: #00f2ff;
+  --accent-dim: rgba(0, 242, 255, 0.2);
+  --bg-card: #0e0e12;
+  --bg-body: #050506;
+  --border-color: #1f1f26;
+  --signed-color: #ff4d4d;
+  --exp-color: #ffcc00;
+  --man-color: #00f2ff;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--bg-body)] text-[#e0e0e6] font-mono;
+  }
+}
+
+.immersive-card {
+  @apply bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-[inset_0_0_40px_rgba(0,0,0,0.5)];
+}
+
+.immersive-label {
+  @apply text-[10px] uppercase tracking-[3px] text-[var(--accent)] mb-1;
+}
+
+.immersive-title {
+  @apply text-2xl font-bold tracking-tighter text-white;
+}
+
+.immersive-section-title {
+  @apply text-[11px] uppercase tracking-[1px] text-gray-500 flex items-center gap-2 after:content-[''] after:h-[1px] after:flex-1 after:bg-[var(--border-color)];
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-dim);
+}
